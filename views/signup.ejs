@@ -1,0 +1,39 @@
+<%- include('header')%>
+
+<div class="ui grid">
+    <div class="four wide column"></div>
+    <div class="eight wide column">
+        <form class="ui form segement" method="post" enctype="multipart/form-data">
+            <div class="field required">
+                <label>Name</label>
+                <input placeholder="User Name" type="text" name="name">
+            </div>
+            <div class="field required">
+                <label>Password</label>
+                <input placeholder="At least 6 characters" type="password" name="password">
+            </div>
+            <div class="field required">
+                <label>Re-enter password</label>
+                <input placeholder="Re-enter you password" type="password" name="repassword">
+            </div>
+            <div class="field required">
+                <label>Gender</label>
+                <select class="ui compact selection dropdown" name="gender">
+                    <option value="m">male</option>
+                    <option value="f">female</option>
+                    <option value="x">keep secret</option>
+                </select>
+            </div>
+            <div class="field required">
+                <label>Profile image</label>
+                <input type="file" name="avatar">
+            </div>
+            <div class="field required">
+                <label>Bio</label>
+                <textarea name="bio" rows="5"></textarea>
+            </div>
+            <input type="submit" class="ui button fluid" value="signup">
+        </form>
+    </div>
+</div>
+<%- include('footer') %>

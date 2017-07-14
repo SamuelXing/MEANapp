@@ -1,0 +1,24 @@
+    <script type="text/javascript">
+        // make the notification fade away automatically
+        $(document).ready(function(){
+           if($('.ui.success.message').length>0){
+               $('.ui.success.message').fadeOut(1000)
+           } else if($('.ui.error.message').length>0)
+           {
+               $('ui.error.message').fadeOut(1000)
+           }
+
+            // dropdown function
+            $('.ui.dropdown').dropdown();
+
+            // when the mouse hover on the profile image, pop up a notification
+            $('.post-content .avatar-link').popup({
+                inline:true,
+                position: 'bottom right',
+                lastResort: 'bottom right'
+            });
+
+        });
+    </script>
+    </body>
+</html>
